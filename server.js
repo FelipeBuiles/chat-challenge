@@ -1,29 +1,28 @@
 "use strict";
 
 var path    = require('path');
-var express = require('express');
+var express = require('express')
 var app     = express();
-var server  = require('http').createServer(app);
-var io      = require('socket.io')(server);
+var http    = require('http').Server(app);
+var io      = require('socket.io')(http);
 
 app.use(express.static(path.join(__dirname, '/public')));
 
-server.listen(3000, function () {
-  console.log('Ready to chat on port 3000!');
+http.listen(3000, function () {
+  console.log('ready to chat')
 });
 
-//
-// Handle a new client connection and setup
-// event handlers
-//
 io.on('connection', function (socket) {
 
   //
   // Allow the client to join a specified room
   //
-  socket.on('join', function (roomName) {
+  socket.on('join', function (data) {
 
-    socket.join(roomName);
+    console.log(data.nickname, 'joined', data.roomName)
+    socket.join(data.roomName)
+    socket.nickname = data.nickname
+    socket.emit('joined room', data.roomName)
 
   });
 
@@ -41,9 +40,10 @@ io.on('connection', function (socket) {
   // they have already joined
   //
   socket.on('send', function (data) {
-
     socket.to(data.room).emit('message', {
       message: data.message,
+      type: data.type,
+      nickname: socket.nickname,
       timestamp: Date.now()
     });
 
