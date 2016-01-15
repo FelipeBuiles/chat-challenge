@@ -5,5 +5,5 @@ Made using [angular-material](https://material.angularjs.org/latest/), [angular-
 # Running
 
 ```javascript
-npm i && bower i && node server.js
+npm i && bower i && npm start
 ```

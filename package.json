@@ -10,18 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cnverg/chat-challenge.git"
+    "url": "https://github.com/FelipeBuiles/chat-challenge.git"
   },
   "keywords": [
     "chat",
     "challenge"
   ],
-  "author": "jobs@cnverg.com",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/cnverg/chat-challenge/issues"
-  },
-  "homepage": "https://github.com/cnverg/chat-challenge#readme",
   "dependencies": {
     "express": "^4.13.3",
     "socket.io": "^1.4.4"
