@@ -1,0 +1,28 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.roomPicker {
+  width: 50vw;
+  transform: translateX(50%) translateY(50%);
+  padding: 30px;
+}
+.messages {
+  height: 92vh;
+  overflow-y: scroll;
+}
+.message:nth-child(odd) { background: #eee; }
+.mine {
+  text-align: right;
+}
+.textArea {
+  position: fixed;
+  bottom: 0;
+  height: 8vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.messageInput {
+  width: 85%;
+  margin-left: 5%;
+}

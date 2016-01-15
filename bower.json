@@ -1,0 +1,29 @@
+{
+  "name": "chat-challenge",
+  "description": "A fun challenge to get you going before the interview",
+  "main": "server.js",
+  "authors": [
+    "Felipe Builes"
+  ],
+  "keywords": [
+    "chat",
+    "challenge"
+  ],
+  "moduleType": [
+    "es6"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-socket-io": "~0.7.0",
+    "angular-material": "~1.0.2",
+    "angular-scroll-glue": "~2.0.6"
+  }
+}
