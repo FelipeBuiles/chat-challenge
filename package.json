@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bower install; npm start"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
