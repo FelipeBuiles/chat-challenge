@@ -19,6 +19,7 @@
     "challenge"
   ],
   "dependencies": {
+    "bower": "^1.7.2",
     "express": "^4.13.3",
     "socket.io": "^1.4.4"
   }
