@@ -8,7 +8,7 @@ var io      = require('socket.io')(http);
 
 app.use(express.static(path.join(__dirname, '/public')));
 
-http.listen(3000, function () {
+http.listen(process.env.PORT || 5000, function () {
   console.log('ready to chat')
 });
 

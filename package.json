@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "description": "A fun challenge to get you going before the interview",
   "main": "index.js",
+  "engines": {
+    "node": "4.2.3"
+  },
   "scripts": {
     "start": "node server.js",
-    "start-dev": "DEBUG=* nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
     "challenge"
   ],
   "dependencies": {
+    "bower": "^1.7.2",
     "express": "^4.13.3",
     "socket.io": "^1.4.4"
   }
