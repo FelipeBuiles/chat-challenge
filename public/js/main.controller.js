@@ -34,7 +34,7 @@ angular.module('app.controllers', [])
     $scope.message.value = ''
     if(msg.substring(0, 6) == '/giphy') {
       var query = 'q=' + encodeURIComponent(msg.substring(6)) + '&limit=1'
-      $http.get('http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&' + query)
+      $http.get('https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&' + query)
         .then(function(res) {
           if(res.data.data.length) {
             result = res.data.data[0].id
